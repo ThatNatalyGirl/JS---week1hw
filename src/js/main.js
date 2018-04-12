@@ -63,3 +63,8 @@ const states = [
 
 let $state = document.querySelector(`[name="state"]`)
 let $suggestions = document.querySelector(`.suggestions`)
+
+
+
+
+
