@@ -67,7 +67,7 @@ let state = document.querySelector(`[name="state"]`)
 let suggestions = document.querySelector(`.suggestions`) 
 
 
-state.addEventListener("keypress", function(input){
+state.addEventListener("change", function(input){
 	const inputVal = state.value
 	//for each element in the array if it includes the value, create our button, if not do nothing
 	states.forEach ((item) => {
@@ -90,7 +90,7 @@ const createButton = function (string) {
 }
 
 //clear out all the buttons in a function
-
+//change to lowercase
 
 
 

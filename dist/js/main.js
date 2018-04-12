@@ -7,7 +7,7 @@ var states = ["Alabama", "Alaska", "American Samoa", "Arizona", "Arkansas", "Cal
 var state = document.querySelector("[name=\"state\"]");
 var suggestions = document.querySelector(".suggestions");
 
-state.addEventListener("keypress", function (input) {
+state.addEventListener("change", function (input) {
 	var inputVal = state.value;
 	//for each element in the array if it includes the value, create our button, if not do nothing
 	states.forEach(function (item) {
@@ -29,6 +29,7 @@ var createButton = function createButton(string) {
 };
 
 //clear out all the buttons in a function
+//change to lowercase
 
 
 //What do I need to do?
