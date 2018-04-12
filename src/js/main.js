@@ -1,3 +1,4 @@
+console.log("hello")
 
 const states = [
 	"Alabama",
@@ -61,8 +62,119 @@ const states = [
 	"Wyoming"
 ]
 
+//What do I need to do?
+//run a function for when letters begin to be typed out in the input text field. 
+//read what letters are being typed and store them in a var
+//if the letters typed are in an array item then populate the array item(s) below as a suggestion. 
+//then if you click on the suggestion it changes the text field to contain that and the other options disappear
+//save that as a string and cross check it with the array items
+//alphabetize the options that come out?
+
+
+//loop through the array for each item in that array 
+
 let $state = document.querySelector(`[name="state"]`)
-let $suggestions = document.querySelector(`.suggestions`)
+let $suggestions = document.querySelector(`.suggestions`) 
+
+//this is listening for the type event and running the program
+window.addEventListener("load", function() {
+	$state.addEventListener("keyup", function(event) {
+		states.forEach(function (element) {
+			if (element.includes($state.value)){
+				$suggestions.innerHTML +=  element; 
+				}
+				console.log(element);
+		});
+		console.log("test")	
+	});	
+});
+
+
+//this is making the strings match up by lower casing them
+// var match = function (str) {
+// 	str = str.toLowerCase();
+// 	for (var i = 0; i < states.length; i++) {
+// 		if (states[i].toLowerCase().startsWith(str)) {
+// 			$state.append ('<div>' + states[i] + '</div>');
+// 		}
+// 	}
+// }
+
+// let applicableStates = states.filter(function(state){
+	
+// })	
+
+//this is looping through the array and making each item a string
+
+	
+
+
+// states.filter(function(state){
+// 	if (searchCharacters.value === states.includes) {
+// 		return state
+// 	} else {}
+// })
+
+// //one to make the list
+// //one to show/hide the list
+// //one to search through the list
+// //one to make the selection
+
+// //this is doing the autocomplete 
+// var autocomplete = function (event){
+//     var input = event.target;
+
+//     if (input.value.length < 0 ) { 
+//         return;
+//     } else { 
+// 		$state.innerHTML = "";
+
+// 		response.forEach(function(item) {
+// 		    var option = document.createElement('option');
+// 		    option.value = item;
+
+// 		    huge_list.appendChild(option);
+// 		});
+// 	}	
+// }
+
+
+// //this is listening for the type event and running the program
+// window.addEventListener("load", function() {
+// 	$state.addEventListener("keyup", function() {
+// 		checkArray();
+// 	});
+// });
+
+
+
+// //this is making the strings match up by lower casing them
+// var match = function (str) {
+// 	str = str.toLowerCase();
+// 	for (var i = 0; i < states.length; i++) {
+// 		if (states[i].toLowerCase().startsWith(str)) {
+// 			$state.append ('<div>' + states[i] + '</div>');
+// 		}
+// 	}
+// }
+
+// var removeDiv = function ()
+//another function
+// var filterStates = function () {
+// 	if (states.forEach === states.includes) {
+// 		return $state
+// 	} else {
+// 		console.log(states.forEach)
+// 	}
+// }
+
+
+
+// then input filed.value = "returned state"
+// and the other ones go away
+// maybe with display none
+
+
 
 
 //Assignment
@@ -81,16 +193,16 @@ let $suggestions = document.querySelector(`.suggestions`)
 //make the others go away
 
 
-searchCharacters = document.querySelectorAll()
+// searchCharacters = document.querySelectorAll()
 
-states.filter(function(state){
-	if (searchCharacters.value === states.includes) {
-		return state
-	} else {}
-})
+// states.filter(function(state){
+// 	if (searchCharacters.value === states.includes) {
+// 		return state
+// 	} else {}
+// })
 
-then input filed.value = "returned state"
-and the other ones go away
+// then input filed.value = "returned state"
+// and the other ones go away
 // maybe with display none
 
 
@@ -116,5 +228,4 @@ and the other ones go away
 
 //     // make the #suggestions field suggest states in the array
 //     suggestify('#suggestions', ["Alabama", "Alaska", ...]);
-
 
