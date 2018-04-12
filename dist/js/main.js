@@ -4,6 +4,33 @@ console.log("hello");
 
 var states = ["Alabama", "Alaska", "American Samoa", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "District Of Columbia", "Federated States Of Micronesia", "Florida", "Georgia", "Guam", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Marshall Islands", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Northern Mariana Islands", "Ohio", "Oklahoma", "Oregon", "Palau", "Pennsylvania", "Puerto Rico", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virgin Islands", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"];
 
+var state = document.querySelector("[name=\"state\"]");
+var suggestions = document.querySelector(".suggestions");
+
+state.addEventListener("keypress", function (input) {
+	var inputVal = state.value;
+	//for each element in the array if it includes the value, create our button, if not do nothing
+	states.forEach(function (item) {
+		return item.includes(inputVal) ? createButton(item) : null;
+		//ternary comparison 
+	});
+});
+
+// the function for making the strings into buttons
+var createButton = function createButton(string) {
+	var button = document.createElement('button');
+	button.innerHTML = string;
+	button.addEventListener("click", function (e) {
+		e.preventDefault();
+		state.value = string;
+	});
+	//this adds the buttons to the dom
+	suggestions.appendChild(button);
+};
+
+//clear out all the buttons in a function
+
+
 //What do I need to do?
 //run a function for when letters begin to be typed out in the input text field. 
 //read what letters are being typed and store them in a var
@@ -15,21 +42,19 @@ var states = ["Alabama", "Alaska", "American Samoa", "Arizona", "Arkansas", "Cal
 
 //loop through the array for each item in that array 
 
-var $state = document.querySelector("[name=\"state\"]");
-var $suggestions = document.querySelector(".suggestions");
-
 //this is listening for the type event and running the program
-window.addEventListener("load", function () {
-	$state.addEventListener("keyup", function (event) {
-		states.forEach(function (element) {
-			if (element.includes($state.value)) {
-				$suggestions.innerHTML += element;
-			}
-			console.log(element);
-		});
-		console.log("test");
-	});
-});
+// window.addEventListener("load", function() {
+// 	$state.addEventListener("keyup", function(event) {
+// 		states.forEach(function (element) {
+// 			if (element.includes($state.value)){
+// 				$suggestions.innerHTML +=  element; 
+// 				}
+// 				console.log(element);
+// 		});
+// 		console.log("test")	
+// 	});	
+// });
+
 
 //this is making the strings match up by lower casing them
 // var match = function (str) {

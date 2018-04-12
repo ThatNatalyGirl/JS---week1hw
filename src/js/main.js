@@ -62,6 +62,39 @@ const states = [
 	"Wyoming"
 ]
 
+
+let state = document.querySelector(`[name="state"]`)
+let suggestions = document.querySelector(`.suggestions`) 
+
+
+state.addEventListener("keypress", function(input){
+	const inputVal = state.value
+	//for each element in the array if it includes the value, create our button, if not do nothing
+	states.forEach ((item) => {
+		return (item.includes(inputVal)
+			? createButton(item) : null)
+			//ternary comparison 
+	})
+})	
+
+// the function for making the strings into buttons
+const createButton = function (string) {
+	let button = document.createElement('button')
+	button.innerHTML = string
+	button.addEventListener ("click", function(e){
+		e.preventDefault()
+		state.value = string
+	})
+	//this adds the buttons to the dom
+	suggestions.appendChild(button)
+}
+
+//clear out all the buttons in a function
+
+
+
+
+
 //What do I need to do?
 //run a function for when letters begin to be typed out in the input text field. 
 //read what letters are being typed and store them in a var
@@ -73,21 +106,18 @@ const states = [
 
 //loop through the array for each item in that array 
 
-let $state = document.querySelector(`[name="state"]`)
-let $suggestions = document.querySelector(`.suggestions`) 
-
 //this is listening for the type event and running the program
-window.addEventListener("load", function() {
-	$state.addEventListener("keyup", function(event) {
-		states.forEach(function (element) {
-			if (element.includes($state.value)){
-				$suggestions.innerHTML +=  element; 
-				}
-				console.log(element);
-		});
-		console.log("test")	
-	});	
-});
+// window.addEventListener("load", function() {
+// 	$state.addEventListener("keyup", function(event) {
+// 		states.forEach(function (element) {
+// 			if (element.includes($state.value)){
+// 				$suggestions.innerHTML +=  element; 
+// 				}
+// 				console.log(element);
+// 		});
+// 		console.log("test")	
+// 	});	
+// });
 
 
 //this is making the strings match up by lower casing them
