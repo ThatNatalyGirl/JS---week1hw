@@ -25,7 +25,7 @@ TABLE OF CONTENTS:
 
 body {
 	font-family: sans-serif;
-	background: green;
+	background: #ddddff;
 	font-family: 'Abril Fatface', cursive;
 }
 
@@ -34,15 +34,14 @@ body {
 form {
 	padding: 75px 175px 0;
 	font-size: 30px;
+	.input{
+		font-size: 20px;
+		font-family: 'Abril Fatface', cursive;
+	}
 	.suggestions {
 		margin: 5px 0;
 		font-size: 0.75em;
 		width: 25%;
-		a {
-			display: inline-block;
-			margin-right: 5px;
-			color: #777;
-		}
 	}
 }
 
@@ -51,7 +50,9 @@ button {
 	margin-left: -2%;
 	font-family: 'Abril Fatface', cursive;
 	font-size: 18px;
-	background: 
 }
 
+button:hover{
+	background: #9191be;
+}
 

@@ -84,16 +84,15 @@ form {
 	font-size: 30px;
 }
 
+form .input {
+	font-size: 20px;
+	font-family: 'Abril Fatface', cursive;
+}
+
 form .suggestions {
 	margin: 5px 0;
 	font-size: 0.75em;
 	width: 25%;
-}
-
-form .suggestions a {
-	display: inline-block;
-	margin-right: 5px;
-	color: #777;
 }
 
 button {
@@ -101,6 +100,10 @@ button {
 	margin-left: -2%;
 	font-family: 'Abril Fatface', cursive;
 	font-size: 18px;
+}
+
+button:hover {
+	background: #9191be;
 }
 
 /*# sourceMappingURL=main.css.map */
