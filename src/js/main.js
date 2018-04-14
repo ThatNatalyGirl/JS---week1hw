@@ -62,7 +62,6 @@ const states = [
 	"Wyoming"
 ]
 
-
 let state = document.querySelector(`[name="state"]`)
 let suggestions = document.querySelector(`.suggestions`) 
 
@@ -88,6 +87,8 @@ const createButton = function (string) {
 	button.addEventListener ("click", function(e){
 		e.preventDefault()
 		state.value = string
+		suggestions.innerHTML = '';
+
 	})
 	//this adds the buttons to the dom
 	suggestions.appendChild(button)

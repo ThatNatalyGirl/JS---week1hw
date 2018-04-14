@@ -28,6 +28,7 @@ var createButton = function createButton(string) {
 	button.addEventListener("click", function (e) {
 		e.preventDefault();
 		state.value = string;
+		suggestions.innerHTML = '';
 	});
 	//this adds the buttons to the dom
 	suggestions.appendChild(button);
