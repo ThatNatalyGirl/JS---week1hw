@@ -94,11 +94,7 @@ const createButton = function (string) {
 }
 
 
-
 // check item.name and then turn the states into objects and give them names and flag img. Call it to put the flag in the click event
-
-
-
 
 
 //What do I need to do?
