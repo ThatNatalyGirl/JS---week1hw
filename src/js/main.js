@@ -88,7 +88,6 @@ const createButton = function (string) {
 		e.preventDefault()
 		state.value = string
 		suggestions.innerHTML = '';
-
 	})
 	//this adds the buttons to the dom
 	suggestions.appendChild(button)
