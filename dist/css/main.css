@@ -75,22 +75,32 @@ table {
 body {
 	font-family: sans-serif;
 	background: #ddddff;
+	font-family: 'Abril Fatface', cursive;
 }
 
 /* 2. Content ================================= */
 form {
-	padding: 20px;
+	padding: 75px 175px 0;
+	font-size: 30px;
 }
 
 form .suggestions {
 	margin: 5px 0;
 	font-size: 0.75em;
+	width: 25%;
 }
 
 form .suggestions a {
 	display: inline-block;
 	margin-right: 5px;
 	color: #777;
+}
+
+button {
+	width: 100%;
+	margin-left: -2%;
+	font-family: 'Abril Fatface', cursive;
+	font-size: 18px;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -67,13 +67,17 @@ let state = document.querySelector(`[name="state"]`)
 let suggestions = document.querySelector(`.suggestions`) 
 
 
-state.addEventListener("change", function(input){
-	const inputVal = state.value
+state.addEventListener("keyup", function(e){
+	suggestions.innerHTML = '';
+	const inputVal = e.currentTarget.value.toLowerCase()
+	//if there isn't anything in the field, stop
+	if (inputVal.length <= 0) {
+		return
+	}
 	//for each element in the array if it includes the value, create our button, if not do nothing
 	states.forEach ((item) => {
-		return (item.includes(inputVal)
-			? createButton(item) : null)
-			//ternary comparison 
+		return item.toLowerCase().includes(inputVal) ? createButton(item) : null
+			//ternary statement
 	})
 })	
 
@@ -89,8 +93,10 @@ const createButton = function (string) {
 	suggestions.appendChild(button)
 }
 
-//clear out all the buttons in a function
-//change to lowercase
+
+
+// check item.name and then turn the states into objects and give them names and flag img. Call it to put the flag in the click event
+
 
 
 
@@ -238,7 +244,7 @@ const createButton = function (string) {
 
 
 
-//YOU HAVE TO USE WHAT YOU LEARN OR IT'S NOT USEFUL
+
 
 // # Advanced Programming - Field Suggestions
 
